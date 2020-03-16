@@ -1,6 +1,6 @@
 {
   "name": "microtil",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mirco sized util package for Javascript, web and server.",
   "keywords": [
     "util",
@@ -13,7 +13,7 @@
   "prepublish": "tsc",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmagyar/micro-util.git"
+    "url": "https://github.com/mmagyar/microtil.git"
   },
   "scripts": {
     "build": "tsc",
