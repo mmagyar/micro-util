@@ -1,7 +1,7 @@
 {
-  "name": "micro-util",
+  "name": "nano-util",
   "version": "1.0.0",
-  "description": "Mirco sized util package for Javascript, web and server.",
+  "description": "Nano sized util package for Javascript, web and server.",
   "keywords": [
     "util",
     "micro util",
