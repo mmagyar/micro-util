@@ -1,0 +1,53 @@
+{
+  "name": "micro-util",
+  "version": "1.0.0",
+  "description": "Mirco sized util package for Javascript, web and server.",
+  "keywords": [
+    "util",
+    "micro util",
+    "extend",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmagyar/micro-util.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "eslint:fix": "eslint src/**/*.ts --fix",
+    "test": "npm run standard && jest",
+    "standard": "standardx **/*.ts",
+    "standard:fix": "standardx --fix **/*.ts",
+    "test:coverage": "npm run standard && jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "standardx": {
+    "env": [
+      "jest"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
+
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "author": "mmagyar.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "jest": "^24.9.0",
+    "standardx": "^5.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
