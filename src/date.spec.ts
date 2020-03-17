@@ -59,6 +59,7 @@ describe('date', () => {
 
   it('transforms js Date to object', () => {
     const date = new Date('2020-01-01T08:08:08Z')
+
     const result = dateToUTCDateTime(date)
     expect(result.date).toStrictEqual({ year: 2020, month: 1, day: 1 })
     expect(result.time).toStrictEqual({
@@ -66,8 +67,7 @@ describe('date', () => {
       minute: 8,
       second: 8,
       millisecond: 0,
-      timezone: 'UTC',
-      inputTimezone: -60
+      timezone: 'UTC'
     })
   })
 
