@@ -1,4 +1,4 @@
-import { move } from './arrayOps'
+import { move, mapFilter } from './arrayOps'
 describe('array ops', () => {
   describe('move', () => {
     const testArray = Object.freeze([1, 2, 3, 4, 5, 6])
@@ -26,6 +26,14 @@ describe('array ops', () => {
 
     it('moves element down', () => {
       expect(move(testArray, 1, 'down')).toStrictEqual([2, 1, 3, 4, 5, 6])
+    })
+  })
+
+  describe('mapFilter', () => {
+    it('doubles numbers and filters strings', () => {
+      const input = [1, 2, 3, '4', 5]
+      const result = mapFilter(input, (element) => typeof element === 'string' ? undefined : element * 2)
+      expect(result).toStrictEqual([2, 4, 6, 10])
     })
   })
 })

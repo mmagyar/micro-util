@@ -1,4 +1,4 @@
-import { forEach, count, map, mapToArray, every } from './objectOps'
+import { forEach, count, map, mapToArray, every, mapToObject, arrayToObject } from './objectOps'
 const exampleObject = Object.freeze({
   keyOne: 'ValueOne',
   keyTwo: 'ValueTwo',
@@ -59,5 +59,49 @@ describe('every for objects', () => {
     })
     expect(result).toStrictEqual(false)
     expect(iterated).toHaveLength(1)
+  })
+})
+
+describe('mapToObject', () => {
+  const input = () => [
+    { id: 4, value: 'x' },
+    { id: 7, value: 'z' },
+    { id: 13, value: 'y' }
+  ]
+
+  it('moves id property to object key while mapping', () => {
+    const result = mapToObject(input(), 'id', (element) => element.value)
+    expect(result).toHaveProperty('4', 'x')
+    expect(result).toHaveProperty('7', 'z')
+    expect(result).toHaveProperty('13', 'y')
+  })
+
+  it('moves value property to object key while mapping', () => {
+    const result = mapToObject(input(), 'value', (element) => element.id)
+    expect(result).toHaveProperty('x', 4)
+    expect(result).toHaveProperty('z', 7)
+    expect(result).toHaveProperty('y', 13)
+  })
+})
+
+describe('arrayToObject', () => {
+  const input = () => [
+    { id: 4, value: 'x' },
+    { id: 7, value: 'z' },
+    { id: 13, value: 'y' }
+  ]
+
+  it('moves id property to object key', () => {
+    const result = arrayToObject(input(), 'id')
+    expect(result).toHaveProperty('4', { id: 4, value: 'x' })
+    expect(result).toHaveProperty('7', { id: 7, value: 'z' })
+    expect(result).toHaveProperty('13', { id: 13, value: 'y' })
+  })
+
+  it('moves value property to object key', () => {
+    const result = arrayToObject(input(), 'value')
+    expect(result).toHaveProperty('x', { id: 4, value: 'x' })
+    expect(result).toHaveProperty('z', { id: 7, value: 'z' })
+    expect(result).toHaveProperty('y', { id: 13, value: 'y' })
   })
 })
