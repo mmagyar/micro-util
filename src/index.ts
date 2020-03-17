@@ -1,5 +1,6 @@
 export * from './arrayOps'
 export * from './async'
+export * from './date'
 export * from './deepCopy'
 export * from './deepFreeze'
 export * from './objectOps'
