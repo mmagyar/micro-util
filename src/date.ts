@@ -33,8 +33,7 @@ export const dateToUTCTime = (date: Date): Time => ({
   minute: date.getUTCMinutes(),
   second: date.getUTCSeconds(),
   millisecond: date.getUTCMilliseconds(),
-  timezone: 'UTC',
-  inputTimezone: date.getTimezoneOffset()
+  timezone: 'UTC'
 })
 export const dateToUTCDateTime = (date: Date): DateTime => ({
   date: dateToUTCIDate(date),
