@@ -1,6 +1,6 @@
 {
   "name": "microtil",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Mirco sized util package for Javascript, web and server.",
   "keywords": [
     "util",
