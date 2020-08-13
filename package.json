@@ -1,6 +1,6 @@
 {
   "name": "microtil",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Mirco sized util package for Javascript, web and server.",
   "keywords": [
     "util",
@@ -10,6 +10,8 @@
   ],
   "main": "./index.js",
   "types": "./index.d.ts",
+  "type": "module",
+  "sideEffects": false,
   "prepublish": "tsc",
   "repository": {
     "type": "git",
