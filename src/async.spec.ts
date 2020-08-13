@@ -1,4 +1,4 @@
-import { promiseDelay, promiseTimeout } from './async'
+import { promiseDelay, promiseTimeout } from './async.js'
 
 describe('promiseTimeout', () => {
   it('returns a promise with an undefined value', async () => {

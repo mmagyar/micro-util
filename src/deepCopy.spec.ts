@@ -1,4 +1,4 @@
-import { deepCopy } from './deepCopy'
+import { deepCopy } from './deepCopy.js'
 describe('deepCopy objects', () => {
   it('created deep copy of input object', () => {
     const og = { a: 1, b: 2, c: { d: 4, e: 5, f: { g: 6 } } }

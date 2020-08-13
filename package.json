@@ -1,6 +1,6 @@
 {
   "name": "microtil",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Mirco sized util package for Javascript, web and server.",
   "keywords": [
     "util",
@@ -21,7 +21,6 @@
     "prepack": "npm run build && npm run build:commonjs",
     "build": "tsc",
     "build:commonjs": "tsc --module \"CommonJS\" -t \"es6\" --outDir \"./cjs\"",
-    "eslint:fix": "eslint src/**/*.ts --fix",
     "test": "npm run build:commonjs && jest",
     "clean:test": "jest --clearCache",
     "standard": "standardx **/*.ts",

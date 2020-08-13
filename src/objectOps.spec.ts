@@ -1,4 +1,4 @@
-import { forEach, count, map, mapToArray, every, mapToObject, arrayToObject } from './objectOps'
+import { forEach, count, map, mapToArray, every, mapToObject, arrayToObject } from './objectOps.js'
 const exampleObject = Object.freeze({
   keyOne: 'ValueOne',
   keyTwo: 'ValueTwo',

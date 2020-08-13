@@ -1,4 +1,4 @@
-import { move, mapFilter } from './arrayOps'
+import { move, mapFilter } from './arrayOps.js'
 describe('array ops', () => {
   describe('move', () => {
     const testArray = Object.freeze([1, 2, 3, 4, 5, 6])

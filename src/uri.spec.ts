@@ -1,4 +1,4 @@
-import { serialize } from './uri'
+import { serialize } from './uri.js'
 
 describe('serialize to query params', () => {
   it('encodes simple object with primitives', () => {

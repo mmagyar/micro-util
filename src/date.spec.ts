@@ -1,4 +1,4 @@
-import { dateToUTCDateTime, dateTimeComp, now, dateToUTCTime, toIsoString } from './date'
+import { dateToUTCDateTime, dateTimeComp, now, dateToUTCTime, toIsoString } from './date.js'
 
 describe('date', () => {
   it('compares years', () => {

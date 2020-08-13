@@ -1,4 +1,4 @@
-import { deepFreeze } from './deepFreeze'
+import { deepFreeze } from './deepFreeze.js'
 describe('deepFreeze objects', () => {
   it('prevents modification of object input object', () => {
     const frozen = { a: 1, b: 2, c: { d: 4, e: 5, f: { g: 6 } } }
